@@ -1,0 +1,268 @@
+/* ---------------------------------- */
+/* CONFIGURATION & POLICES            */
+/* ---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@300;500;700;900&display=swap');
+
+:root {
+    --color-light-green: #D7F8B6;
+    --color-vibrant-green: #ADE76C;
+    --color-accent-red: #E4756A;
+    --color-dark-green: #154100;
+    --color-text: #1a1a1a;
+    --color-background: #ffffff;
+    --shadow: 8px 8px 0px 0px var(--color-dark-green);
+    --border-thick: 4px solid var(--color-dark-green);
+}
+
+/* ---------------------------------- */
+/* RESET & BASE                       */
+/* ---------------------------------- */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-light-green);
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* ---------------------------------- */
+/* STRUCTURE                          */
+/* ---------------------------------- */
+header {
+    background-color: var(--color-dark-green);
+    color: var(--color-vibrant-green);
+    padding: 60px 5%;
+    text-align: center;
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    border-bottom: 12px solid var(--color-accent-red);
+}
+
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+footer {
+    background-color: var(--color-dark-green);
+    margin-top: 100px;
+    height: 120px;
+    border-top: 8px solid var(--color-accent-red);
+}
+
+/* ---------------------------------- */
+/* TYPOGRAPHIE                        */
+/* ---------------------------------- */
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    background: var(--color-accent-red);
+    color: white;
+    display: inline-block;
+    padding: 10px 30px;
+    transform: rotate(-1.5deg);
+    margin: 60px 0 40px 0;
+    border: var(--border-thick);
+    box-shadow: 10px 10px 0px var(--color-dark-green);
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    line-height: 1;
+    color: var(--color-dark-green);
+}
+
+p {
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* ---------------------------------- */
+/* BLOCS CONTENEURS (GRAPHS & SECTIONS)*/
+/* ---------------------------------- */
+.warning,
+.evolution_nb_de_msg,
+.avg_msg_hour_weekday,
+.rudeness_graph,
+.connexions,
+.trends {
+    background: white;
+    border: var(--border-thick);
+    margin-bottom: 60px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+}
+
+/* Cas particulier du gros graph de connexions */
+.connexions {
+    border-right-width: 12px;
+}
+
+/* IFRAMES / PLOTLY */
+.plotly-graph, iframe {
+    width: 100%;
+    height: 600px;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    background: #fdfdfd;
+    margin-top: 20px;
+}
+
+.connexions iframe {
+    height: 1100px !important;
+}
+
+/* ---------------------------------- */
+/* WARNING BOX                        */
+/* ---------------------------------- */
+.warning {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.warning h2 {
+    color: var(--color-accent-red);
+    font-size: 2.5rem;
+    border: none;
+}
+
+.warning ul {
+    list-style: none;
+    padding: 0;
+}
+
+.warning li {
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.warning li::before {
+    content: "🍊";
+    margin-right: 15px;
+}
+
+/* ---------------------------------- */
+/* DISCORD AWARDS (LA GRILLE)         */
+/* ---------------------------------- */
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Tous les types de blocs d'awards */
+[class^="award-"], .chomage, .artisan, .mamoune, .reac, .dp, .jetlag, .conjoint, .pet, .kids, .fucker, .story {
+    background: white;
+    border: var(--border-thick);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 6px 6px 0px var(--color-dark-green);
+    transition: all 0.2s ease;
+}
+
+[class^="award-"]:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--color-accent-red);
+}
+
+/* Listes de résultats dans les awards */
+dl {
+    margin: 0;
+}
+
+dt {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: 15px;
+}
+
+dd {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 5px 0 10px 0;
+    border-bottom: 2px solid var(--color-light-green);
+}
+
+/* Styling des gagnants (First) */
+.first {
+    color: var(--color-accent-red) !important;
+    font-size: 1.7rem !important;
+    border-bottom: 4px solid var(--color-accent-red) !important;
+    background: transparent !important;
+    padding: 10px 0 !important;
+}
+
+/* Les remarques / vacheries */
+.remark {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-dark-green);
+    margin-top: 8px;
+    background: var(--color-light-green);
+    padding: 8px 12px;
+    border-left: 6px solid var(--color-vibrant-green);
+}
+
+/* ---------------------------------- */
+/* IMAGES STYLE                       */
+/* ---------------------------------- */
+img {
+    border: var(--border-thick);
+    box-shadow: 12px 12px 0px var(--color-vibrant-green);
+    max-width: 100%;
+    height: auto;
+    margin: 40px auto;
+    display: block;
+    background: white;
+}
+
+/* ---------------------------------- */
+/* UTILS                              */
+/* ---------------------------------- */
+hr {
+    border: none;
+    border-top: 8px dashed var(--color-dark-green);
+    margin: 80px 0;
+}
+
+.htmx-indicator {
+    color: var(--color-accent-red);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Style pour le nouveau graphique des shitposters */
+.msg_by_user {
+    background: white;
+    border: var(--border-thick);
+    margin-bottom: 60px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+}
+
+/* Ajustement de la hauteur spécifique pour voir tout le monde sans scroll excessif */
+.msg_by_user iframe {
+    height: 850px !important; /* Plus haut que les 600px par défaut pour accommoder la liste des noms */
+    width: 100%;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    background: #fdfdfd;
+    margin-top: 20px;
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord 2025 annuel statistic review</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        Salon Anim's 2025 annual review
+    </header>
+
+    <div style="text-align: center; margin-top: 20px;">
+        <img src="discord_awards_3.png" alt="Une saloperie d'illustration créée par IA" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="warning">
+        <h2>⚠️ READ THIS MOTHERFUCKER ! ⚠️</h2>
+        <p>Pour une expérience à peu près décente, il est impératif de parcourir ce document :</p>
+        <ul>
+            <li>Depuis un ordinateur (afin de pouvoir zoomer sur les graphes et profiter pleinement des multiples animations de nos intermittents du spectacle).</li>
+            <li>Invitez vos conjoints et enfants pour partager un moment familial agréable.</li>
+            <li>Avec un navigateur **plus moderne** que le sens de la décoration de Julie.</li>
+            <li>Agathe, lis bien les consignes avant de poser des questions, merci. 😉</li>
+        </ul>
+        <p><b>Pour jouer avec les graphes :</b></p>
+        <ul>
+            <li>Vous pouvez zoomer à l'infini avec un clic & drag sur une zone souhaitée. Les axes s'adaptent automatiquement. Plutôt utile sur le nombre de messages par jour.</li>
+            <li>Si vous avez trop zoomé, cliquez sur "Autoscale" en haut à droite du graphique.</li>
+            <li>Le graphe des connexions entre utilisateurs est très gros. Si en passant la souris sur quelqu'un, le détail des mentions ne s'affiche pas, dézoomez votre affichage.</li>
+        </ul>
+
+        <h2> Special thanks :</h2>
+        <ul>
+            <li> Angel pour le partage des données </li>
+            <li> Kaspa pour les créas faites à la main</li>
+            <li> Kadma pour avoir été une PM bien casse couille</li>
+            </li>
+        </ul>
+    </div>
+
+    <main>
+        <h1>RÉTROSPECTIVE STATISTIQUE</h1>
+        <p>L'ensemble des graphiques présentés a été établi sur la base de l'intégralité des messages postés sur le salon Anim en 2025. Le mois de décembre n'est pas complet et seuls les utilisateurs ayant posté <b>plus de 100 messages</b> ont été retenus. Le code complet sera livré quand j'aurai rangé le bordel.</p>
+        <p> Kyosansdoute n'est absolument pas Kyo mais flemme de corriger </p>
+
+        <div class="msg_by_user">
+            <h2>Classement des shitposters par nombre de messages</h2>
+            <p><strong>Explications pour Agathe :</strong> Si Jean-Michel a écrit 200 messages entre le 01/01/2025 et mi-décembre 2025, alors ça met "200" pour la barre de Jean-Michel.</p>
+            <iframe src="msg_by_user.html" class="plotly-graph"></iframe>
+        </div>
+
+            <div class="msg_by_user">
+            <h2>Message par user et par mois</h2>
+            <p><strong>VOUS POUVEZ FILTRER :</strong> Cliquez sur les noms que vous ne voulez pas voir apparaitre (genre coincoin) pour masquer leurs lignes du graph</p>
+            <iframe src="user_msg_by_month_line.html" class="plotly-graph"></iframe>
+        </div>
+
+        <div class="evolution_nb_de_msg">
+            <h2>Évolution du nombre de messages postés par jour</h2>
+            <p><strong>Explications pour Agathe :</strong> ça veut dire que si par exemple le 12/03/2025 il y a eu 1500 messages, alors ça met "1500" au 12/03/2025.</p>
+            <iframe src="nb_msg_by_day.html" class="plotly-graph"></iframe>
+        </div>
+
+        <div class="avg_msg_hour_weekday">
+            <h2>Nombre de messages postés par jour et par heure</h2>
+            <p><strong>Explications pour Agathe :</strong> Kadma a comprite toute seule alors pas besoin d'explications !</p>
+            <iframe src="avg_msg_by_hour_and_week_day.html" class="plotly-graph"></iframe>
+        </div>
+
+        <div class="rudeness_graph">
+            <h2>Nombre de grossièretés et score de grossièreté par utilisateur</h2>
+            <p>Ici, le nombre de grossièretés prononcées par auteur·ice ainsi que son score de grossièreté en % (rapporté à son total de messages).</p>
+            <p><strong>Explications pour Agathe :</strong> si par exemple, tu as envoyé 10 messages dont 5 contiennent le mot "Couille", cela fait 5 messages grossiers sur 10, soit 50 %. Vincent te soufflera sans doute qu'il aurait été plus malin de rapporter ça au nombre de mots par utilisateur mais je l'emmerde, lui et ses mollets.</p>
+            <iframe src="rudeness_score_by_user.html" class="plotly-graph"></iframe>
+        </div>
+
+        <div class="connexions">
+            <h2>Connexions entre utilisateurs</h2>
+            <p>Ici, chaque utilisateur est représenté par une bulle (un nœud). Plus le nœud est gros, plus ce dernier a été mentionné (@nomdel'auteur).</p>
+            <p>Rappel : dézoomez votre navigateur si nécessaire, en particulier si votre écran fait la taille d'une gameboy. </p>
+            <p> DEZOOMER LE NAVIGATEUR PAS LE GRAPH J'AI DIS-JE</p>
+            <p><strong>Explications pour Agathe :</strong> Trait en rouge : le nœud mentionne quelqu'un. En vert : le nœud est mentionné.</p>
+            <iframe src="connexion_overall.html" class="plotly-graph"></iframe>
+        </div>
+
+        <div class="trends">
+            <h2>Trending topics</h2>
+            <p>Voici la liste des mots ou noms par catégorie et le nombre de messages qui les contiennent.</p>
+
+            <h3>Grossièretés :</h3>
+            <iframe src="rude_words.html" class="plotly-graph"></iframe>
+            <h3>MemeWords :</h3>
+            <iframe src="memes.html" class="plotly-graph"></iframe>
+            <h3>Animaux de compagnie :</h3>
+            <iframe src="pets.html" class="plotly-graph"></iframe>
+            <h3>Enfants de cons :</h3>
+            <iframe src="kids.html" class="plotly-graph"></iframe>
+            <h3>LORE TRENDS :</h3>
+            <iframe src="trend.html" class="plotly-graph"></iframe>
+        </div>
+
+        <hr>
+
+        <h1>DISCORD AWARDS 2025</h1>
+        <p>Parce que les statistiques ne traduisent pas toujours nos préférences réelles, les rares connards avec un compte Google ont pu directement voter pour leurs coups de cœur. Voici les résultats :</p>
+
+        <img src="discord_award_2.png" alt="Naomi recevant son prix d'élue de mon cœur" style="max-width: 100%; border-radius: 10px;">
+
+        <div class="award-orthographe">
+            <h2>AWARD DU TOCARD QUI RESPECTE LE MIEUX LES RÈGLES DE FRANÇAIS ABSURDES</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">ENORA (53 %)</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">LOUISE (23 %)</dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">Ex æquo : Soukhos, Kadma, Kaspa, Naomi</dd>
+                <dt class="last">❌ Dernier :</dt>
+                <dd class="last">Louis <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="chomage">
+            <h2>AWARD DU PLUS GROS CHÔMEUR</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">FLOBER (100 %)</dd>
+            </dl>
+        </div>
+
+        <div class="artisan">
+            <h2>AWARD DU MEILLEUR ARTISAN</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">THOMAS - 38 % <span class="remark"> </span></dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">SPIROU - 30 % <span class="remark">Couture, isolation et décoration d'intérieur</span></dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">JULIE <span class="remark"></span></dd>
+                <dt class="last">Mention spéciale :</dt>
+                <dd class="last">Naomi <span class="remark">- Elle est très belle ta bougie t'inquiète.</span></dd>
+            </dl>
+        </div>
+
+        <div class="artisan">
+            <h2>AWARD DE LA COPINE PRÉFÉRÉE DE FLOBER</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">ENORA - 100 % <span class="remark">- Flober a répondu sans hésiter. </span></dd>
+                <dt class="last">Dernière :</dt>
+                <dd class="last">Julie <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="mamoune">
+            <h2>AWARD DE LA PLUS GROSSE MAMOUNE</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">AGATHE (76 %)</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">JULIE (23 %)</dd>
+                <dt class="last">Dernier :</dt>
+                <dd class="last">KADMA <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="reac">
+            <h2>AWARD DU PLUS GROS RÉAC'</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">ANGEL (71 %)</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">SPIROU (21 %)</dd>
+                <dt class="last">❌ Dernier :</dt>
+                <dd class="last">SKATE <span class="remark">- Maman est très déçue.</span></dd>
+            </dl>
+        </div>
+
+        <div class="dp">
+            <h2>AWARD DE LA PLUS BELLE DP</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">SKATE (100 %) <span class="remark">- Maman est très fière.</span></dd>
+            </dl>
+        </div>
+
+        <div class="jetlag">
+            <h2>AWARD DU PLUS GROS JETLAG</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">AGATHE <span class="remark">- Elle a gagnate.</span></dd>
+            </dl>
+        </div>
+
+        <div class="conjoint">
+            <h2>AWARD DU CONJOINT LE MOINS ENCLIN À FAIRE LA CHOSE</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">Louis (50 %)</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">Naomi (7 %)</dd>
+                <dt class="last">❌ Dernier :</dt>
+                <dd class="last">Certainement pas Julie (42 %). <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="pet">
+            <h2>AWARD DE L'ANIMAL DE COMPAGNIE LE PLUS CUTE</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">Otso (42 %) <span class="remark">- Les animaux racés seront bannis à la prochaine édition.</span></dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">Saturnin (28 %)</dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">Jean-Paul (14 %)</dd>
+                <dt class="last">Dernier :</dt>
+                <dd class="last">La mère de Skate</dd>
+            </dl>
+        </div>
+
+        <div class="kids">
+            <h2>AWARD DU PLUS BEL ENFANT</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">Alix (35 %) <span class="remark">- La vie tend enfin les bras à une enfant non désirée.</span></dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">Sacha (28 %) <span class="remark"></span></dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">Ex æquo : Raphaël et Jade du même père (14 %)</dd>
+                <dt class="last">Dernier :</dt>
+                <dd class="last">Raphaël d'Agathe (7 %) <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="fucker">
+            <h2>AWARD DU PLUS GROS FUCKER</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">LOUISE <span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="story">
+            <h2>AWARD DE LA PLUS BELLE HISTOIRE</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">Thingo qui regarde Pralouz essayer de faire bander un collègue à lui depuis la Chine - 57 %</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">Ex æquo : Le chalet et le fou du caca dans le métro - 14 %</dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">Ex æquo : Lucie (Louis) et la toiture du voisin qui prend feu</dd>
+            </dl>
+        </div>
+
+        <div class="story">
+            <h2>AWARD DU PLUS GROS PN</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">THOMAS  (35%)</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">SKATE (14%)</dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">KASPA  (7%)</dd>
+                <dt class="last">❌ Dernier :</dt>
+                <dd class="last">LOUIS (42%)<span class="remark"></span></dd>
+            </dl>
+        </div>
+
+        <div class="story">
+            <h2>Award : n'a rien de diagnostiqué mais devrait prendre rendez-vous dans le doute</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">LOUIS - 35 %</dd>
+                <dt class="second">🥈 2e :</dt>
+                <dd class="second">Ex æquo : Spirou et Skate - 14 %</dd>
+                <dt class="third">🥉 3e :</dt>
+                <dd class="third">NAOMI - 7 %</dd>
+                <dt class="last">Dernier :</dt>
+                <dd class="last">Flober <span class="remark">Flober a déjà tous les diags possibles.</span></dd>
+            </dl>
+        </div>
+
+        <div class="story">
+            <h2>AWARD DU PLUS GROS NORMIE</h2>
+            <dl>
+                <dt class="first">🥇 1er :</dt>
+                <dd class="first">Ex æquo : Rémi & Agathe (44 % chacun)</dd>
+                <dt class="last">Dernier :</dt>
+                <dd class="last">ANGEL <span class="remark"></span></dd>
+            </dl>
+        </div>
+    </main>
+
+    <footer style="height: 100px;">
+    </footer>
+</body>
+</html>
